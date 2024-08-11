@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Details</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Invoice Details</h1>
+    <table>
+        <tr>
+            <th>Customer Name</th>
+            <td>{{ data.customer_name }}</td>
+        </tr>
+        <tr>
+            <th>Customer Address</th>
+            <td>{{ data.customer_address }}</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>{{ data.date }}</td>
+        </tr>
+        <tr>
+            <th>Product Name</th>
+            <td>{{ data.product_details[0].name }}</td>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td>{{ data.product_details[0].quantity }}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{ data.product_details[0].price }}</td>
+        </tr>
+        <tr>
+            <th>Total Amount</th>
+            <td>{{ data.total_amount }}</td>
+        </tr>
+    </table>
+</body>
+</html>
